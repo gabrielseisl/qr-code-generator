@@ -1,0 +1,27 @@
+CREATE TABLE qr_codes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    link VARCHAR(100) NOT NULL,
+    nome_arquivo VARCHAR(100) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE codigos_barras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    codigo VARCHAR(13) NOT NULL,
+    nome_arquivo VARCHAR(100) NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE senhas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    senha VARCHAR(100) NOT NULL,
+    quantidade_caracteres INT NOT NULL,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+    
+CREATE TABLE imagens(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_arquivo VARCHAR(100) NOT NULL,
+    url_imagem VARCHAR(100),
+    data_download DATETIME DEFAULT CURRENT_TIMESTAMP
+);
